@@ -108,14 +108,12 @@ body {
 }
 
 .logo-link {
-    margin-right: 77px;
-    padding: 24px 0px;
-
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 1.16;
     letter-spacing: 0.03em;
+    margin-right: 77px;
     color: var(--iris-color);
     text-transform: uppercase;
 }
@@ -159,9 +157,15 @@ body {
     color: var(--iris-color);
 }
 
-.menu-link.current-page:hover::after,
-.menu-link.current-page:focus::after {
+
+.menu-link:hover,
+.menu-link:focus {
     color: var(--secondary-color);
+}
+
+.current-page:hover,
+.current-page:focus {
+    color: var(--iris-color);
 }
 
 .menu-link:active {
@@ -370,7 +374,6 @@ body {
 .customers-list-item {
     width: 168px;
     height: 88px;
-    transition: border-color var(--transition-dur-and-func);
 }
 
 .customers-list-link {
@@ -381,7 +384,7 @@ body {
     border: 1px solid var(--customers-list-color);
     border-radius: 4px;
     color: var(--customers-list-color);
-    transition: color var(--transition-dur-and-func);
+    transition: color var(--transition-dur-and-func), border-color var(--transition-dur-and-func);
 }
 
 .customers-list-icon {
